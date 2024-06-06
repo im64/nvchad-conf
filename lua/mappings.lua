@@ -10,6 +10,11 @@ map("i", "jk", "<ESC>")
 map("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Previous buffer", silent = true })
 map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
 
+-- git
+map('n', '<leader>gh', ':Gitsigns preview_hunk<CR>', { desc = 'Show git hunk' })
+map('n', '<leader>h', ':Gitsigns preview_hunk<CR>', { desc = 'Show git hunk' })
+map('n', '<leader>gn', ':Gitsigns next_hunk<CR>', { desc = 'Go to the next hunk' })
+
 -- diagnostic
 map('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 map('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
