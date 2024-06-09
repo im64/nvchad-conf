@@ -36,19 +36,33 @@ return {
         "css-lsp",
         "prettier",
         "pyright",
+        "eslint-lsp",
+        "tailwindcss-language-server",
+        "typescript-language-server",
       },
     },
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {"javascript", "javascriptreact", "typescript", "typescriptreact"},
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
         "vim",
+        "cpp",
         "lua",
         "vimdoc",
         "html",
         "css",
         "python",
+        "javascript",
+        "typescript",
+        "tsx",
       },
     },
   },
