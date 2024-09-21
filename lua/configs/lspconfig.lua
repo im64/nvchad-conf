@@ -8,29 +8,29 @@ local servers = { "html", "cssls", "pyright", "clangd" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    on_init = on_init,
-    capabilities = capabilities,
-  }
+    lspconfig[lsp].setup {
+        on_attach = on_attach,
+        on_init = on_init,
+        capabilities = capabilities,
+    }
 end
 
 -- typescript
 lspconfig.ts_ls.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
+    on_attach = on_attach,
+    on_init = on_init,
+    capabilities = capabilities,
 }
 
 lspconfig.pyright.setup {
-  on_attach = on_attach,
-  settings = {
-    python = {
-      analysis = {
-        typeCheckingMode = "off",
-        autoSearchPaths = true,
-        useLibraryCodeForTypes = true,
-      },
+    on_attach = on_attach,
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "off",
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+            },
+        },
     },
-  },
 }
