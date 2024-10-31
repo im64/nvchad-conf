@@ -8,7 +8,7 @@ M.ui = {
     theme = "tokyodark",
 
     nvdash = {
-        load_on_startup = true,
+        load_on_startup = false,
 
         header = {
             "           ▄ ▄                   ",
